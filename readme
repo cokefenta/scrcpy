@@ -1,0 +1,61 @@
+使用教程
+
+博主这里采用Windows 10 64位系统作为演示，首先我们从GitHub上下载Scrcpy WIN 64位客户端，然后解压缩至桌面
+
+首先我们在安卓设备上打开USB调试模式，在下面的截图当中，你可以看到博主安卓设备的USB调试模式已经打开。
+
+然后我们打开CMD命令行，使用CD命令切换到Scrcpy目录，运行下面的一行命令
+adb devices
+
+如果你能看到你的设备ID，就代表你的安卓设备已经成功连接至电脑。
+
+接着我们运行下一个命令
+scrcpy -s 你的设备ID
+
+然后Scrcpy就会自动运行软件并弹出你的安卓设备界面，你就可以像使用你的安卓设备一样正常操控。
+
+Scrcpy命令行操作
+
+设置端口
+scrcpy -p 27184
+
+查看帮助
+scrcpy --help
+
+设置码率（默认8M）
+scrcpy -b 8M
+
+限制投屏尺寸
+scrcpy -m 1024
+
+裁剪投屏屏幕(长:宽:偏移x:偏移y)
+scrcpy -c 800:800:0:0
+
+投屏并录屏
+scrcpy -r file.mp4
+
+不投屏只录屏
+scrcpy -Nr file.mp4
+
+手指触摸的时候显示轨迹球
+scrcpy -t
+
+显示版本信息
+scrcpy -v
+Scrcpy快捷键
+Action	Shortcut
+切换全屏模式	Ctrl+f
+将窗口调整为1：1（完美像素）	Ctrl+g
+调整窗口大小以删除黑色边框	Ctrl+x | 双击黑色背景
+设备HOME键	Ctrl+h | 鼠标中键
+设备BACK键	Ctrl+b | 鼠标右键
+设备任务管理键	Ctrl+s
+设备菜单键 	Ctrl+m
+设备音量+键	Ctrl+↑
+设备音量-键	Ctrl+↓
+设备电源键	Ctrl+p
+点亮手机屏幕	鼠标右键
+复制内容到设备	Ctrl+v
+启用/禁用FPS计数器（stdout）	Ctrl+i
+安装APK	将apk文件拖入投屏
+传输文件到设备	将文件拖入投屏（非apk）
